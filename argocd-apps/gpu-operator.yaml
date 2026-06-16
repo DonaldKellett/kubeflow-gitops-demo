@@ -11,11 +11,7 @@ spec:
     targetRevision: v26.3.2
     helm:
       values: |
-        validator:
-          driver:
-            env:
-              - name: DISABLE_DEV_CHAR_SYMLINK_CREATION
-                value: "true"
+        criSocket: /run/k3s/containerd/containerd.sock
   destination:
     server: https://kubernetes.default.svc
     namespace: gpu-operator
