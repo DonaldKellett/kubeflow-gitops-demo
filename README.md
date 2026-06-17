@@ -60,7 +60,7 @@ Now point your browser to [http://localhost:8080/](http://localhost:8080/) and l
 1. The Kubeflow components take about 20 minutes to stabilize. Even then, some workloads may be stuck in `CrashLoopBackOff` status and unable to progress without manual intervention. Using `kubectl rollout restart` to re-deploy these workloads often resolves the issue
 1. The default user `user@example.com` cannot access the `kubeflow-user-example-com` namespace from the GUI despite the corresponding Profile being defined. As a result, the Kubeflow dashboard is unusable and workloads cannot be deployed
 
-## Asciicast walkthrough
+## Demo
 
 TODO
 
