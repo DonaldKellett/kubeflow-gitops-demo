@@ -37,11 +37,11 @@ spec:
       prune: true
       selfHeal: true
     retry:
-      limit: 5
+      limit: 10
       backoff:
         duration: 5m
-        factor: 2
-        maxDuration: 20m
+        factor: 1
+        maxDuration: 5m
     syncOptions:
       - ServerSideApply=true
       - ClientSideApplyMigration=false
