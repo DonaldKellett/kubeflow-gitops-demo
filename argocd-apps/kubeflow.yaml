@@ -39,9 +39,9 @@ spec:
     retry:
       limit: 10
       backoff:
-        duration: 20s
+        duration: 1m
         factor: 2
-        maxDuration: 5m
+        maxDuration: 16m
     syncOptions:
       - ServerSideApply=true
       - ClientSideApplyMigration=false
