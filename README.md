@@ -63,10 +63,8 @@ Now point your browser to [http://localhost:8080/](http://localhost:8080/) and l
 
 ## Known issues
 
-1. The `argocd-apps` bootstrap application may report a sync status of `Unknown` initially and fail to progress without manual intervention. Restarting the Argo CD related deployments with `kubectl rollout restart` should solve the issue
-1. The `kubeflow` Application enters `OutOfSync` status with `Degraded` health after some time. The upstream Kubeflow Community Distribution \(KCD\) Kustomize manifests may not be optimized for GitOps deployment with Argo CD and may be missing [sync wave](https://argo-cd.readthedocs.io/en/stable/user-guide/sync-waves/) annotations required for successful reconciliation
-1. The Kubeflow components take about 20 minutes to stabilize. Even then, some workloads may be stuck in `CrashLoopBackOff` status and unable to progress without manual intervention. Using `kubectl rollout restart` to re-deploy these workloads often resolves the issue
-1. The default user `user@example.com` cannot access the `kubeflow-user-example-com` namespace from the GUI despite the corresponding Profile being defined. As a result, the Kubeflow dashboard is unusable and workloads cannot be deployed
+1. The `kubeflow` Application's sync status remains `OutOfSync` despite its health reported as `Healthy`. Nevertheless, this should not affect the user experience
+1. When accessing the Kubeflow dashboard with `kubectl port-forward`, accessing the "Notebooks" tab fails with a connection timeout issue. Nevertheless, they can be created via the command line
 
 ## Demo
 
@@ -80,7 +78,7 @@ _View recording on [Asciinema](https://asciinema.org/a/1257724)._
 
 ![Kubeflow login page](./assets/images/01-kubeflow-gitops-login-page.png)
 
-![Kubeflow dashboard](./assets/images/02-kubeflow-gitops-dashboard.png)
+![Kubeflow dashboard](./assets/images/04-kubeflow-gitops-dashboard-fixed.png)
 
 ## License
 
