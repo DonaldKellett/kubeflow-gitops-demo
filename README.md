@@ -64,7 +64,7 @@ Now point your browser to [http://localhost:8080/](http://localhost:8080/) and l
 ## Known issues
 
 1. The `kubeflow` Application's sync status remains `OutOfSync` despite its health reported as `Healthy`. Nevertheless, this should not affect the user experience
-1. When accessing the Kubeflow dashboard with `kubectl port-forward`, accessing the "Notebooks" tab fails with a connection timeout issue. Nevertheless, they can be created via the command line
+1. When accessing the Kubeflow dashboard with `kubectl port-forward`, accessing the "Notebooks" tab fails with a connection timeout issue. Nevertheless, they can be created via the CLI with the example YAML provided under `samples/`
 
 ## Demo
 
@@ -79,6 +79,8 @@ _View recording on [Asciinema](https://asciinema.org/a/1257724)._
 ![Kubeflow login page](./assets/images/01-kubeflow-gitops-login-page.png)
 
 ![Kubeflow dashboard](./assets/images/04-kubeflow-gitops-dashboard-fixed.png)
+
+![Kubeflow GPU-enabled PyTorch notebook](./assets/images/05-kubeflow-gitops-notebook-pytorch-cuda.png)
 
 ## License
 
