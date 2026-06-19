@@ -37,9 +37,9 @@ spec:
       prune: true
       selfHeal: true
     retry:
-      limit: 10
+      limit: 5
       backoff:
-        duration: 1m
+        duration: 4m
         factor: 2
         maxDuration: 16m
     syncOptions:
