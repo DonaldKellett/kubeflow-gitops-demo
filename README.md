@@ -68,9 +68,9 @@ Now point your browser to [http://localhost:8080/](http://localhost:8080/) and l
 
 ## Demo
 
-_View recording on [Asciinema](https://asciinema.org/a/1257724)._
+_View recording on [Asciinema](https://asciinema.org/a/1258090)._
 
-![Demo](./assets/images/03-kubeflow-gitops-demo.gif)
+![Demo](./assets/images/06-kubeflow-gitops-demo-fixed.gif)
 
 ## Screenshots
 
