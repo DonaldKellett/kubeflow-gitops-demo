@@ -15,6 +15,15 @@ kubelet-arg:
   - "max-pods=250"
 ```
 
+The software versions used are listed in the table below.
+
+| Software component | Version |
+| --- | --- |
+| Kubernetes | `v1.35.5+k3s1` |
+| Go | `1.26.4` |
+| NVIDIA driver | `595.71.05` |
+| CUDA | `13.2` |
+
 ## Prerequisites
 
 Deploy `v0.18.0` of [argoproj-labs/argocd-operator](https://github.com/argoproj-labs/argocd-operator) with `make deploy` and set the following environment variable in the operator workload.
