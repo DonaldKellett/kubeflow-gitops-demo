@@ -9,6 +9,27 @@ spec:
     repoURL: https://github.com/kubeflow/community-distribution.git
     path: example/
     targetRevision: 26.03.1
+    kustomize:
+      patches:
+        - target:
+            kind: DaemonSet
+            name: istio-cni-node
+            namespace: kube-system
+          patch: |-
+            apiVersion: apps/v1
+            kind: DaemonSet
+            metadata:
+              name: istio-cni-node
+            spec:
+              template:
+                spec:
+                  volumes:
+                    - name: cni-bin-dir
+                      hostPath:
+                        path: /var/lib/rancher/k3s/data/current/bin
+                    - name: cni-net-dir
+                      hostPath:
+                        path: /var/lib/rancher/k3s/agent/etc/cni/net.d
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
