@@ -6,11 +6,9 @@ Bootstrap a self-service AI platform with GitOps
 
 Single-node K3s cluster on `pi2.2xlarge.4` ECS instance running on [Huawei Cloud](https://www.huaweicloud.com/intl/en-us/). The ECS instance has 8 vCPU, 32G memory, 128G system disk and 1 NVIDIA Tesla T4 datacenter GPU. Furthermore, it's assumed NVIDIA driver version 595.71.05 and CUDA version 13.2 are installed on the host.
 
-The K3s `config.yaml` given below. Traefik ingress is disabled and the per-node pod limit is raised from 110 to 250.
+The K3s `config.yaml` is given below. The per-node pod limit is raised from 110 to 250.
 
 ```yaml
-disable:
-  - traefik
 kubelet-arg:
   - "max-pods=250"
 ```
